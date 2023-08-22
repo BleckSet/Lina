@@ -1,0 +1,1496 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@font-face {
+  font-family: "Berlingske";
+  src: local("Berlingske Serif Italic"), local("Berlingske-Serif-Italic"), url("../fonts/BerlingskeSerif-Italic.woff2") format("woff2"), url("../fonts/BerlingskeSerif-Italic.woff") format("woff"), url("../fonts/BerlingskeSerif-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: local("Avenir Next Bold"), local("Avenir-Next-Bold"), url("../fonts/AvenirNextCyr-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: local("Avenir Next Medium Italic"), local("Avenir-Next-Medium-Italic"), url("../fonts/AvenirNextCyr-MediumItalic.woff2") format("woff2"), url("../fonts/AvenirNextCyr-MediumItalic.woff") format("woff"), url("../fonts/AvenirNextCyr-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: local("Avenir Next Medium"), local("Avenir-Next-Medium"), url("../fonts/AvenirNextCyr-Medium.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Medium.woff") format("woff"), url("../fonts/AvenirNextCyr-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid none;
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.5 ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+* {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+p,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+span,
+a,
+dd {
+  color: inherit;
+  margin: 0;
+  font-family: "Inter";
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 100vw;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mob {
+  display: none;
+}
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+  background: url("../img/dest/fon.jpg") center/cover no-repeat;
+  min-height: 850px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background: url("../img/dest/intro_bottom.svg") center/cover;
+}
+
+.intro_header_svg .mob {
+  display: none;
+}
+
+.intro_bg {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.intro_bg img {
+  position: absolute;
+  height: 780px;
+  overflow: hidden;
+}
+.intro_bg img:first-child {
+  left: -50px;
+}
+.intro_bg img:last-child {
+  right: -50px;
+}
+
+.intro_bg:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -500px;
+  top: -100px;
+  z-index: 5;
+  background: url("../img/dest/light.png") center/contain no-repeat;
+  -webkit-animation: rotate 20s infinite;
+          animation: rotate 20s infinite;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+            transform: translateX(0px) translateY(0px) rotate(0deg);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  42% {
+    -webkit-transform: translateY(-100px) rotate(-15deg);
+            transform: translateY(-100px) rotate(-15deg);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+            transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+            transform: translateX(0px) translateY(0px) rotate(0deg);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  42% {
+    -webkit-transform: translateY(-100px) rotate(-15deg);
+            transform: translateY(-100px) rotate(-15deg);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+            transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+}
+.intro_person {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  z-index: 3;
+  width: 1200px;
+  height: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.intro_person img {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro_header {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 780px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  top: -15px;
+  z-index: 5;
+  margin: 0 auto;
+}
+.intro_header h1 {
+  color: #860041;
+  font-family: "Avenir Next";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.intro_header svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.intro_title {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 125px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.intro_title h1 {
+  color: #FFF;
+  font-family: "Playfair Display", serif;
+  font-size: 160.864px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 131.695px; /* 72.814% */
+  letter-spacing: 11.756px;
+}
+
+.intro_info {
+  position: relative;
+  z-index: 6;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.intro_left, .intro_right {
+  position: relative;
+}
+.intro_left h3, .intro_right h3 {
+  color: #FFF;
+  font-family: "Avenir Next";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  margin-bottom: 100px;
+}
+.intro_left p, .intro_right p {
+  color: #FFF;
+  font-family: "Berlingske";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 86%;
+  text-transform: lowercase;
+  font-style: italic;
+  margin-bottom: 100px;
+  max-width: 250px;
+}
+.intro_left p strong, .intro_right p strong {
+  color: #45F1FF;
+}
+.intro_left p:last-child, .intro_right p:last-child {
+  text-align: center;
+}
+
+.intro_right {
+  margin-left: auto;
+}
+.intro_right h3 {
+  text-align: right;
+  margin-bottom: 35px;
+}
+.intro_right p {
+  margin: 50px 0 0 auto;
+  text-align: center;
+}
+.intro_right p:last-child {
+  margin-right: 50px;
+}
+
+.pink_button:hover {
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
+}
+
+.pink_button {
+  width: 380px;
+  height: 120px;
+}
+.pink_button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.pink_button a span {
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 22.115px;
+  font-weight: 700;
+  letter-spacing: 0.885px;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.pink_button a svg {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.plan {
+  background: url("../img/dest/provodnik_bg.jpg") center/cover no-repeat;
+}
+.plan .pink_button {
+  margin: 70px auto 0;
+}
+
+.plan_inner {
+  display: -ms-grid;
+  display: grid;
+  justify-items: space-between;
+  -ms-grid-columns: 1fr 100px 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  grid-row-gap: 50px;
+  grid-row: auto;
+}
+
+.plan_number {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+  background: linear-gradient(132deg, #FED8EB 0%, #FFEDF6 43.02%, #FBD 100%);
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.plan_number svg {
+  position: absolute;
+}
+.plan_number span {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 73.808px;
+  font-weight: 500;
+  line-height: 63.98px; /* 86.684% */
+  letter-spacing: -3.69px;
+}
+
+.plan_inner_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.title_text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title_text h1 {
+  text-align: center;
+  color: rgb(212, 59, 103);
+  font-family: "Berlingske";
+  font-size: 58px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 86%; /* 49.88px */
+  margin-bottom: 5px;
+}
+.title_text h3 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 61.511px; /* 102.518% */
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#616161));
+  background: linear-gradient(180deg, #272727 0%, #616161 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plan_info {
+  color: #272727;
+  font-family: "Avenir Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+section {
+  position: relative;
+}
+
+.tarif {
+  padding-top: 150px;
+  min-height: 1405px;
+  background: url("../img/dest/tarig_bg.jpg") center/cover no-repeat;
+}
+.tarif .slash {
+  top: 0;
+}
+
+.tarif_intro {
+  padding-left: 40px;
+  position: relative;
+  z-index: 8;
+  margin-top: -88px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  border-radius: 13px;
+}
+
+.tarif_intro_img {
+  position: relative;
+  margin-top: -167px;
+  margin-right: -5px;
+}
+
+.slash {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+}
+
+.title h1 {
+  margin-top: 80px;
+  text-align: center;
+  color: #FFF;
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 52.011px; /* 86.684% */
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.tarif_main {
+  position: relative;
+  padding: 30px;
+  width: 100%;
+  min-height: 500px;
+  background: #fff;
+  margin: 40px auto 0;
+  border-radius: 22px;
+}
+.tarif_main .title h1 {
+  margin-top: 0;
+  font-family: "Avenir Next";
+  font-size: 43.075px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  text-align: left;
+  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#616161));
+  background: linear-gradient(180deg, #272727 0%, #616161 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.show_cleaning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.show_cleaning ul {
+  margin: 0 0 50px;
+  padding-left: 20px;
+}
+
+.show_cleaning_item {
+  position: relative;
+  max-width: 320px;
+}
+
+.show_cleaning_item, .tarif_main_item_Flow.choose {
+  margin-top: 25px;
+}
+.show_cleaning_item h4, .tarif_main_item_Flow.choose h4 {
+  color: #5A5A5A;
+  font-family: "Avenir Next";
+  font-size: 23.77px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+.show_cleaning_item ul li, .tarif_main_item_Flow.choose ul li {
+  color: #737171;
+  font-family: "Avenir Next";
+  font-size: 17.23px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+.show_cleaning_item h3, .tarif_main_item_Flow.choose h3 {
+  color: #D43B67;
+  font-family: "Berlingske";
+  font-size: 37.69px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.show_cleaning_item h5, .tarif_main_item_Flow.choose h5 {
+  margin: 0 0 30px;
+  color: #5A5A5A;
+  font-family: "Avenir Next";
+  font-size: 23.691px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+.show_cleaning_item .pink_button, .tarif_main_item_Flow.choose .pink_button {
+  bottom: -75px;
+  cursor: pointer;
+  position: absolute;
+  width: 291.831px;
+  height: 88.303px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.show_cleaning_item .pink_button svg, .tarif_main_item_Flow.choose .pink_button svg {
+  width: 100%;
+  height: 100%;
+}
+.show_cleaning_item .pink_button span, .tarif_main_item_Flow.choose .pink_button span {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 22.115px;
+  font-weight: 700;
+  letter-spacing: 0.885px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: rgb(90, 90, 90);
+}
+.show_cleaning_item .pink_button.buy, .tarif_main_item_Flow.choose .pink_button.buy {
+  bottom: -230px;
+  width: 349px;
+  height: 115px;
+}
+.show_cleaning_item .pink_button.buy a span, .tarif_main_item_Flow.choose .pink_button.buy a span {
+  color: #fff;
+}
+.show_cleaning_item .pink_button:hover svg path, .tarif_main_item_Flow.choose .pink_button:hover svg path {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  fill: #EC74FF;
+}
+.show_cleaning_item .pink_button:hover svg path:first-child, .tarif_main_item_Flow.choose .pink_button:hover svg path:first-child {
+  fill: #e95bff;
+}
+.show_cleaning_item .pink_button:hover span, .tarif_main_item_Flow.choose .pink_button:hover span {
+  color: #fff;
+}
+
+.switch_item:hover {
+  background: linear-gradient(132deg, #FED8EB 0%, #FFEDF6 43.02%, #FBD 100%);
+}
+
+.switch_item {
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: absolute;
+  left: -128px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7.157px;
+  width: 213.22px;
+  height: 43.075px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background: linear-gradient(141deg, #EBEBEB 0%, #FFF 52.75%, #EFEFEF 100%), linear-gradient(314deg, #D43B67 0%, #E76B8F 100%);
+}
+.switch_item span {
+  color: #616161;
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 19.384px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 99.5%; /* 19.287px */
+  text-transform: uppercase;
+}
+
+.switch_item:first-child {
+  top: 115px;
+}
+
+.switch_item:last-child {
+  top: 335px;
+}
+
+.switch_item.active {
+  background: linear-gradient(132deg, #FED8EB 0%, #FFEDF6 43.02%, #FBD 100%);
+}
+
+.choose {
+  opacity: 0;
+  z-index: -2;
+  position: fixed;
+}
+
+.choose.active {
+  position: unset;
+  opacity: 1;
+  z-index: 1;
+}
+
+.cleaning_item_inner.choose {
+  display: none;
+}
+
+.cleaning_item_inner.choose.active {
+  display: block;
+}
+
+.show_cleaning_item.choose, .tarif_main_item_Flow.choose {
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.show_cleaning_item.choose .info, .tarif_main_item_Flow.choose .info {
+  max-width: 500px;
+  width: 100%;
+}
+.show_cleaning_item.choose .text, .tarif_main_item_Flow.choose .text {
+  max-width: 500px;
+}
+.show_cleaning_item.choose .text ul, .tarif_main_item_Flow.choose .text ul {
+  padding-left: 20px;
+}
+.show_cleaning_item.choose .text p, .tarif_main_item_Flow.choose .text p {
+  color: #5A5A5A;
+  font-family: "Avenir Next";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  margin-top: 25px;
+}
+
+.price {
+  font-family: "Avenir Next";
+  font-size: 32.441px;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#616161));
+  background: linear-gradient(180deg, #272727 0%, #616161 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 40px;
+}
+
+.tarif_main_item_Flow .info {
+  max-width: 420px;
+}
+.tarif_main_item_Flow .info ul {
+  padding: 0;
+}
+.tarif_main_item_Flow .info ul li {
+  list-style: none;
+}
+
+.pink_button.afterswitch {
+  width: 400px !important;
+  height: 125px !important;
+  left: 250px !important;
+  bottom: -150px !important;
+}
+.pink_button.afterswitch a span {
+  color: #fff !important;
+}
+
+.pink_button.afterswitch.white {
+  left: 715px !important;
+  bottom: -100px;
+}
+
+.advantager {
+  padding-bottom: 200px;
+  margin-top: 100px;
+  position: relative;
+  background: url("../img/dest/advantages_fon.png") center/cover no-repeat;
+}
+
+.advantager_item h1 {
+  text-align: center;
+  color: #6D6D6D;
+  font-family: "Avenir Next";
+  font-size: 37.546px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+
+.advatager_item_inner {
+  margin-top: 50px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 570px;
+  height: 120px;
+  width: 100%;
+  border-radius: 3.793px;
+  background: linear-gradient(314deg, #E43A96 0%, #FF84C3 100%);
+}
+.advatager_item_inner span {
+  color: #FFF;
+  font-family: "Avenir Next";
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.advantager_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tarif_intro_text span {
+  color: #737373;
+  font-family: "Berlingske";
+  font-size: 37px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.tarif_intro_text span strong {
+  color: #272727;
+  font-weight: 400;
+}
+.tarif_intro_text p {
+  margin-top: 15px;
+  color: #7D7D7D;
+  font-family: "Avenir Next";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.tarif_intro_text p strong {
+  color: #272727;
+}
+.tarif_intro_text .text-flex {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 35px;
+}
+.tarif_intro_text .text-flex span {
+  display: block;
+  color: #5A5A5A;
+  font-family: "Avenir Next";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+.tarif_intro_text h2 {
+  display: block;
+  color: #E76B8F;
+  font-family: "Berlingske";
+}
+
+.tarif_intro_text {
+  margin-top: 40px;
+}
+
+.footer:before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  bottom: 100px;
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 10;
+  background: url("../img/dest/advantages_fog_r.png") right/contain no-repeat;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  bottom: 150px;
+  right: 0;
+  z-index: 10;
+  background: url("../img/dest/advantages_fog_r.png") right/contain no-repeat;
+}
+
+footer {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+footer h4 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#616161));
+  background: linear-gradient(180deg, #272727 0%, #616161 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer_inner {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer_inner a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #616161;
+  font-family: Avenir Next Cyr;
+  font-size: 18.297px;
+  font-weight: 450;
+  text-transform: uppercase;
+  height: 56px;
+  border-radius: 7.864px;
+  background: linear-gradient(132deg, #FED8EB 0%, #FFEDF6 43.02%, #FBD 100%);
+  padding: 0 20px;
+  width: 300px;
+}
+
+@media (max-width: 1610px) {
+  .pink_button {
+    width: 330px;
+  }
+  .intro_right {
+    margin-left: unset;
+  }
+  .intro_info {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 295px;
+    margin-top: 25px;
+  }
+  .intro_title {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .intro_bg img:first-child {
+    left: -15vw;
+  }
+  .intro_bg img:last-child {
+    right: -15vw;
+  }
+}
+@media (max-width: 1370px) {
+  .tarif_main {
+    width: 90%;
+  }
+  .plan_inner {
+    justify-items: space-around;
+  }
+}
+@media (max-width: 1260px) {
+  .tarif_intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    padding: 0 15px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .tarif_intro_img {
+    margin-top: -175px;
+    margin-right: -44px;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .tarif_intro_text span {
+    font-size: 23px;
+  }
+  .tarif_intro_text .text-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .tarif_intro_text p {
+    max-width: 260px;
+  }
+  .tarif_intro_text p br {
+    display: none;
+  }
+  .tarif_intro_text .text-flex {
+    max-width: 227px;
+  }
+  .show_cleaning {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+  }
+  .tarif_main {
+    margin: 110px auto 0;
+    min-height: 950px;
+    max-width: 400px;
+  }
+  .tarif_main .pink_button, .tarif_main .pink_button.buy {
+    width: 160.533px;
+    height: 79.896px;
+    bottom: -50px;
+  }
+  .tarif_main .pink_button svg, .tarif_main .pink_button.buy svg {
+    -webkit-transform: none !important;
+            transform: none !important;
+    display: block !important;
+  }
+  .tarif_main .pink_button span, .tarif_main .pink_button.buy span {
+    font-size: 11px !important;
+  }
+  .tarif_main .pink_button {
+    left: 80px;
+  }
+  .tarif_main .pink_button.buy {
+    left: auto;
+    right: -100px;
+  }
+  .tarif_main svg {
+    position: absolute;
+    display: none;
+  }
+  .tarif {
+    min-height: 2300px;
+  }
+  .switch_item:first-child, .switch_item:last-child {
+    top: -35px;
+    -webkit-transform: none;
+            transform: none;
+    width: 160px;
+    height: 36px;
+  }
+  .switch_item:first-child span, .switch_item:last-child span {
+    font-size: 15.384px;
+  }
+  .switch_item:last-child {
+    left: 20px;
+  }
+  .switch_item:first-child {
+    left: auto;
+    right: 20px;
+  }
+}
+@media (max-width: 1021px) {
+  .plan_info {
+    font-size: 16px;
+  }
+  .tarif .slash {
+    top: -12px;
+  }
+}
+@media (max-width: 987px) {
+  .footer:before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    bottom: 350px;
+    left: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    z-index: 10;
+    background: url("../img/dest/advantages_fog_r.png") right/contain no-repeat;
+  }
+  .footer::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    bottom: 350px;
+    right: 0;
+    z-index: 10;
+    background: url("../img/dest/advantages_fog_r.png") right/contain no-repeat;
+  }
+  .plan_inner {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .plan_inner_item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .advantager_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+  }
+  .advatager_item_inner {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .tarif_main_item_Flow.choose, .show_cleaning_item.choose {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .title_text h1 {
+    font-size: 25px;
+  }
+  .title_text h3 {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 34px;
+    line-height: 34.557px;
+  }
+  .advantager_item h1 {
+    font-size: 25px;
+  }
+  .advatager_item_inner span {
+    font-size: 11px;
+  }
+  .pink_button.afterswitch {
+    left: auto !important;
+    width: 150px !important;
+  }
+  .pink_button.afterswitch.white {
+    left: 80px !important;
+  }
+  .pink_button.afterswitch {
+    bottom: -100px !important;
+  }
+  .advantager {
+    margin-top: 0;
+    padding-top: 100px;
+  }
+  .advantager svg.mob {
+    position: absolute;
+    width: 100%;
+    top: -50px;
+  }
+}
+@media (max-width: 500px) {
+  .show_cleaning_item.choose .text p, .tarif_main_item_Flow.choose .text p {
+    font-size: 17px;
+  }
+  .show_cleaning_item ul li, .tarif_main_item_Flow.choose ul li {
+    font-size: 15px;
+  }
+  .pink_button {
+    width: 300px;
+    height: 90px;
+  }
+  .pink_button a span {
+    font-size: 17px;
+  }
+  .tarif .slash {
+    top: -51px;
+  }
+  .intro_title {
+    padding-top: 170px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro_title h1 {
+    font-size: 90px;
+    line-height: 1;
+  }
+  .intro_title h1:last-child {
+    margin-left: auto;
+  }
+  .intro_person {
+    height: 500px;
+    width: 100%;
+  }
+  .intro_bg {
+    display: none;
+  }
+  .intro {
+    min-height: 1200px;
+    background: url("../img/dest/fon_mob.jpg") center/cover no-repeat;
+  }
+  .intro_info {
+    display: block;
+  }
+  .intro_left p {
+    top: 300px;
+    left: 222px;
+    position: absolute;
+    font-size: 11px;
+    text-align: center;
+    max-width: 120px;
+    width: 120px;
+  }
+  .intro_left p br {
+    display: none;
+  }
+  .intro_left p:last-child {
+    font-size: 14px;
+    max-width: 110px;
+    position: absolute;
+    top: 0;
+    left: 14px;
+  }
+  .intro_left p:last-child br {
+    display: none;
+  }
+  .intro_left h3 {
+    position: absolute;
+    top: -215px;
+    left: 0px;
+    font-size: 15px;
+  }
+  .intro_right h3 {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 15px;
+  }
+  .intro_right p {
+    width: 120px;
+    font-size: 13px;
+  }
+  .intro_right p {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .intro_right p:last-child {
+    position: absolute;
+    top: -324px;
+    right: 0;
+  }
+  .intro_person img {
+    position: absolute;
+    top: -298px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transform: translateX(-60px) scale(2.5);
+            transform: translateX(-60px) scale(2.5);
+  }
+  .intro_person:before {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
+    width: 100%;
+    height: 300px;
+    background: url("../img/dest/fog_mb.png") center/cover no-repeat;
+  }
+  .intro_info .pink_button {
+    position: absolute;
+    bottom: -600px;
+    z-index: 11;
+    width: 335px;
+  }
+  .intro_header {
+    width: 280px;
+    height: 100px;
+    top: 0;
+  }
+  .intro_header h1 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .intro_header_svg {
+    display: none;
+  }
+  .intro_header_svg.mob {
+    display: block;
+  }
+  .title_text h3 br {
+    display: none;
+  }
+  .tarif_intro {
+    width: 340px;
+  }
+  .tarif_intro_text span br {
+    display: none;
+  }
+  .tarif_intro_text span {
+    font-size: 19px;
+  }
+  .tarif_intro_text p {
+    font-size: 21px;
+  }
+  .tarif_intro_img {
+    width: 100%;
+    height: 100%;
+  }
+  .tarif_intro {
+    overflow: hidden;
+    width: 100%;
+    height: 457px;
+  }
+  .tarif_intro_img {
+    border-radius: 13px;
+    -webkit-transform: translate(-21px, 0) scale(1.095);
+            transform: translate(-21px, 0) scale(1.095);
+  }
+  .tarif_intro_img img {
+    border-radius: 30px;
+    width: 100%;
+    height: 345px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .tarif_intro_text .text-flex span {
+    font-size: 11px;
+  }
+  .tarif_intro_text p {
+    font-size: 13px;
+    width: 155px;
+  }
+  .tarif_intro_text .text-flex {
+    margin-top: 15px;
+    width: 170px;
+  }
+  .tarif_intro_text .text-flex br {
+    display: none;
+  }
+  .tarif_intro_text h2 {
+    font-size: 15px;
+  }
+  .mob {
+    display: block;
+  }
+  .desk {
+    display: none;
+  }
+  .plan_number {
+    width: 60px;
+    height: 60px;
+  }
+  .plan_number span {
+    font-size: 47px;
+    top: -5px;
+    left: 8px;
+  }
+  .plan_number svg {
+    width: 20px;
+    height: 20px;
+  }
+  .plan_info {
+    font-size: 12px;
+  }
+  .tarif {
+    padding-top: 0;
+  }
+  .advatager_item_inner {
+    height: 80px;
+  }
+  .advatager_item_inner img {
+    width: 60px;
+    height: 60px;
+  }
+  .tarif_main .pink_button, .tarif_main .pink_button.buy {
+    width: 130px;
+    bottom: -30px;
+  }
+  .tarif_main .pink_button {
+    right: -80px;
+    left: auto;
+  }
+  .tarif_main .pink_button.buy {
+    left: 50px;
+    right: auto;
+  }
+  .tarif {
+    min-height: 1950px;
+  }
+  .footer_inner {
+    margin-bottom: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .footer_inner a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: unset;
+  }
+}
+@media (max-width: 376px) {
+  .show_cleaning_item ul li, .tarif_main_item_Flow.choose ul li {
+    font-size: 13px;
+  }
+}
